@@ -9,7 +9,8 @@ import {
   mdiViewList,
   mdiTelevisionGuide,
   mdiResponsive,
-  mdiPalette
+  mdiPalette,
+  mdiFoodOutline 
 } from '@mdi/js'
 
 export default [
@@ -17,6 +18,10 @@ export default [
     to: '/dashboard',
     icon: mdiMonitor,
     label: 'Dashboard'
+  },{
+    to: '/products',
+    label: 'Products',
+    icon: mdiFoodOutline
   },
   {
     to: '/tables',
@@ -37,11 +42,6 @@ export default [
     to: '/responsive',
     label: 'Responsive',
     icon: mdiResponsive
-  },
-  {
-    to: '/',
-    label: 'Styles',
-    icon: mdiPalette
   },
   {
     to: '/profile',
@@ -69,11 +69,5 @@ export default [
         label: 'Item Two'
       }
     ]
-  },
-  {
-    href: 'https://github.com/justboil/admin-one-vue-tailwind',
-    label: 'GitHub',
-    icon: mdiGithub,
-    target: '_blank'
   }
 ]

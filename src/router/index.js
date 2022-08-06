@@ -22,6 +22,32 @@ const routes = [
     component: Home
   },
   {
+    // Document title tag
+    // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
+    meta: {
+      title: 'Products'
+    },
+    path: '/products',
+    name: 'products',
+    component: () => import('@/views/products/ProductsView.vue'),
+    children: [
+      {
+        // UserProfile will be rendered inside User's <router-view>
+        // when /user/:id/profile is matched
+        path: '',
+        name:'ProductsList',
+        component: () => import('@/views/products/ProductsList.vue'),
+      },
+      {
+        // UserProfile will be rendered inside User's <router-view>
+        // when /user/:id/profile is matched
+        path: 'addProducts',
+        name:'addProducts',
+        component: () => import('@/views/products/AddProductsView.vue'),
+      },
+    ],
+  },
+  {
     meta: {
       title: 'Tables'
     },

@@ -28,7 +28,7 @@ const submit = () => {
   <LayoutGuest>
     <SectionFullScreen
       v-slot="{ cardClass }"
-      bg="purplePink"
+      bg="pinkRed"
     >
       <CardBox
         :class="cardClass"
